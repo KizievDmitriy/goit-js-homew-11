@@ -1,0 +1,80 @@
+.search-form {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    z-index: 7;
+    background: rgb(214, 214, 214);
+}
+
+.form-inp-btn {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.search-form button {
+    position: absolute;
+    left: 90%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: 0 none;
+    cursor: pointer;
+
+    @media screen and (min-width: 768px) {
+        left: 64%;
+    }
+
+    @media screen and (min-width: 1200px) {
+        left: 58%;
+    }
+}
+
+.search-form input {
+    height: 40px;
+    border-radius: 24px;
+    outline: none;
+    padding: 20px 48px;
+    border: 1px solid rgb(120, 120, 120);
+    box-shadow: none;
+    cursor: pointer;
+    -webkit-transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:focus,
+    &:hover {
+        border: 1px solid #1f96d6;
+        box-shadow: 1px 3px 8px 3px rgba(41, 158, 204, 0.64);
+        -webkit-box-shadow: 1px 3px 8px 3px rgba(41, 158, 204, 0.64);
+        -moz-box-shadow: 1px 3px 8px 3px rgba(41, 158, 204, 0.64);
+    }
+}
+
+.svg-icon.search-icon {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+
+    /* On hover: blue strokes */
+    &:focus,
+    &:hover {
+        .search-path {
+            stroke: #299ecc;
+        }
+    }
+
+    /* On click: thicker black strokes  */
+    &:active {
+        .search-path {
+            stroke: #299ecc;
+            stroke-width: 2px;
+        }
+    }
+}
