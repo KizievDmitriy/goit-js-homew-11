@@ -27,11 +27,21 @@
     background: none;
     border: 0 none;
     cursor: pointer;
-
+    @media screen and (min-width: 360px) and(max-width: 374px) {
+        left: 74%;
+    }
+    @media screen and (min-width: 375px) and(max-width: 400px) {
+        left: 84%;
+    }
+    @media screen and (min-width: 401px) and(max-width: 424px) {
+        left: 74%;
+    }
+    @media screen and (min-width: 425px) and(max-width: 469px) {
+        left: 78%;
+    }
     @media screen and (min-width: 768px) {
         left: 64%;
     }
-
     @media screen and (min-width: 1200px) {
         left: 58%;
     }
